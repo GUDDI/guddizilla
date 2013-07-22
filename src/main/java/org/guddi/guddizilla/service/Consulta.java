@@ -5,6 +5,7 @@
 package org.guddi.guddizilla.service;
 
 import javax.jws.WebMethod;
+import javax.jws.WebParam;
 import javax.jws.WebService;
 
 /**
@@ -21,5 +22,14 @@ public class Consulta {
     public String versao() {
         return "1.0.0";
     }
-    
+
+    /**
+     * Operação de Web service
+     */
+    @WebMethod(operationName = "Valida")
+    public String valida(@WebParam(name = "servico") String servico) {
+        //TODO write your implementation code here:
+        return "OK";
+    }
+
 }
